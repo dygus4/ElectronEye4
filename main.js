@@ -9,13 +9,15 @@ function main() {
   let mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true
+
     },
-    width: 800,
-    height: 600,
+    width: 520,
+    height: 650,
+    frame: false
   })
 
   // load app/index.html as the window content
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   mainWindow.loadFile(path.join('app', 'index.html'));
 }
 
